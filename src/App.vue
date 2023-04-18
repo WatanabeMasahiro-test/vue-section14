@@ -1,26 +1,69 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container mt-4">
+    <div class="row">
+      <router-view name="header"></router-view>
+      <RouterView v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </RouterView>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import './assets/animate.css/animate.min.css'
+  import './assets/css/style.css'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  export default {
+    name: 'App',
+    components: {
+
+    },
+    data: () => ({
+
+      }),
+      computed: {
+      },
+      methods: {
+        // testFunc() {
+        //   return false;
+        // },
+        // beforeEnter()   {},
+        // enter(el, done)   {},
+        // afterEnter()    {},
+        // enterCancelled(){},
+        // beforeLeave()   {},
+        // leave(el, done)         {},
+        // afterLeave()    {},
+        // leaveCancelled(){},
+    },
   }
-}
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+.link--active {
+  font-size: 20px;
 }
+
+  .fade-enter-from {
+    opacity: 0;
+  }
+  .fade-enter-active {
+    transition: opacity 1s;
+  }
+  /* .fade-enter-to {} */
+  /* .fade-leave-from {} */
+  .fade-leave-active {
+
+    transition: opacity 1s;
+  }
+  .fade-leave-to {
+    opacity: 0;
+  }
+  /* @keyframes __-in {
+    from {}
+    to {}
+  } */
+  
 </style>

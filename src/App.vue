@@ -22,21 +22,21 @@
     },
     data: () => ({
 
-      }),
-      computed: {
-      },
-      methods: {
-        // testFunc() {
-        //   return false;
-        // },
-        // beforeEnter()   {},
-        // enter(el, done)   {},
-        // afterEnter()    {},
-        // enterCancelled(){},
-        // beforeLeave()   {},
-        // leave(el, done)         {},
-        // afterLeave()    {},
-        // leaveCancelled(){},
+    }),
+    computed: {
+    },
+    methods: {
+      // testFunc() {
+      //   return false;
+      // },
+      // beforeEnter()   {},
+      // enter(el, done)   {},
+      // afterEnter()    {},
+      // enterCancelled(){},
+      // beforeLeave()   {},
+      // leave(el, done)         {},
+      // afterLeave()    {},
+      // leaveCancelled(){},
     },
   }
 </script>
